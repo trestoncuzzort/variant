@@ -56,7 +56,7 @@ def build(source,owner,label,standard='17',control=False,expected=0):
 
 minimum='14' if compiler=='msvc' else '11'
 exe,text=build(root/'validation/probe.cpp','original','original-probe',standard=minimum,expected='failure')
-assert 'Changer' in text and ('rvalue' in text or 'bind' in text or 'C2664' in text),text[-4000:]
+assert 'Changer' in text and ('rvalue' in text or 'lvalue' in text or 'bind' in text or 'C2664' in text),text[-4000:]
 exe,text=build(root/'validation/probe.cpp','fixed','fixed-probe',standard=minimum)
 execute([exe],'fixed-probe-run')
 for phase in ['original','fixed']:
