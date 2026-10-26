@@ -1,0 +1,46 @@
+name: Reference visitation validation
+on:
+  push:
+    branches: [validation/reference-visitation]
+permissions:
+  contents: read
+jobs:
+  regression:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            compiler: gcc11
+          - os: ubuntu-24.04
+            compiler: clang-sanitized
+          - os: macos-14
+            compiler: clang
+          - os: windows-2022
+            compiler: msvc
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: 41050ba06762d485f9b22e2917f7c9d7274b9b9d
+          path: fixed
+      - uses: actions/checkout@v4
+        with:
+          ref: d3e821cbf49589124f0fb77ff87b757d3c47d303
+          path: original
+      - uses: ilammy/msvc-dev-cmd@v1
+        if: runner.os == 'Windows'
+      - name: Install GCC 11
+        if: matrix.compiler == 'gcc11'
+        run: sudo apt-get update && sudo apt-get install -y g++-11
+      - name: Check pinned probes, references, owned values and controls
+        env:
+          VALIDATION_COMPILER: ${{ matrix.compiler }}
+        run: python validation/verify_reference_visitation.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: references-${{ matrix.os }}-${{ matrix.compiler }}
+          path: validation-output/
+          if-no-files-found: error

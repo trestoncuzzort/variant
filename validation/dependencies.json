@@ -1,0 +1,66 @@
+[
+  {
+    "repository": "boostorg/assert",
+    "head": "612d35df55376c6412f0477ed62d4d241f8861b7"
+  },
+  {
+    "repository": "boostorg/config",
+    "head": "369d933b53ee985543a81c0329c57c86de121755"
+  },
+  {
+    "repository": "boostorg/container_hash",
+    "head": "9f302c9a7b7f1779c06c1cfc3a506cd79675b9fe"
+  },
+  {
+    "repository": "boostorg/core",
+    "head": "177a1c61748a61a03aaa1d4ec696f81625e66cff"
+  },
+  {
+    "repository": "boostorg/describe",
+    "head": "ae199a79f7a75790b368613208e95270dae48755"
+  },
+  {
+    "repository": "boostorg/detail",
+    "head": "be38ccb0c1f8d321877170df22dcf0d41af1d3cc"
+  },
+  {
+    "repository": "trestoncuzzort/integer",
+    "head": "761179e7a5ec2945367fc83d3ec9f7b3c512c712"
+  },
+  {
+    "repository": "boostorg/io",
+    "head": "5c738076aa9aafc7392b2004c6b6f268b076a9f0"
+  },
+  {
+    "repository": "boostorg/mp11",
+    "head": "0daffd6401724ddf473fd39d28f68e138d9a1303"
+  },
+  {
+    "repository": "boostorg/mpl",
+    "head": "9d1f81ffeb055ea1ce0d96370bf07c40a2843878"
+  },
+  {
+    "repository": "boostorg/predef",
+    "head": "80fea9874f2fc02351b3a1ade08867e7d510cf3f"
+  },
+  {
+    "repository": "boostorg/preprocessor",
+    "head": "cd1b1bd03900b68505822cfa25cb16851bd6caf1"
+  },
+  {
+    "repository": "boostorg/throw_exception",
+    "head": "0924b53b40d1da33301f94fb97518f5a7df31e9b"
+  },
+  {
+    "repository": "boostorg/type_index",
+    "head": "5dfbd62f265eb01e77f78cd9675946f0afec2f89"
+  },
+  {
+    "repository": "boostorg/type_traits",
+    "head": "e6275ccf01c9cf8775ef0cb6188bd58f3b167a0f"
+  },
+  {
+    "repository": "boostorg/utility",
+    "head": "c3f5f523dead32e1a1bbc92b1c1864d713ec16ea"
+  }
+]
